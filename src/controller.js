@@ -5,7 +5,7 @@ const { secretId, secretKey, Domain, SubDomain } = require("./config");
 const tencentcloud = require("tencentcloud-sdk-nodejs-dnspod");
 // 更新 Cloudflare 优选IP开始-----------------------------------------------------------------------------------------------------
 const updateCloudflareIp = async () => {
-  const res = await axios.get("https://api.vvhan.com/tool/cf_ip");
+  const res = await axios.get("https://api.4ce.cn/api/bestCFIP");
   if (!res.data.success) {
     console.log("\x1b[91m%s\x1b[0m", "更新 Cloudflare 优选IP失败");
     return "更新 Cloudflare 优选IP失败";
